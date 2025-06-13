@@ -17,7 +17,6 @@
     <div class="container">
       <h1>Mans Portfelis</h1>
       <nav>
-	<button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
         <a href="#projekti">Projekti</a>
         <a href="#par">Par Mani</a>
         <a href="#kontakti">Kontakti</a>
@@ -77,30 +76,5 @@
   <footer>
     <p>&copy; 2025 Aimens. Izveidots mācībām.</p>
   </footer>
-	<script>
-  const toggleButton = document.getElementById('theme-toggle');
-
-  toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    
-    // Save the preference
-    if (document.body.classList.contains('dark-mode')) {
-      localStorage.setItem('theme', 'dark');
-      toggleButton.textContent = '☀️';
-    } else {
-      localStorage.setItem('theme', 'light');
-      toggleButton.textContent = '🌙';
-    }
-  });
-
-  // Load saved preference
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      toggleButton.textContent = '☀️';
-    }
-  });
-</script>
 </body>
 </html>
